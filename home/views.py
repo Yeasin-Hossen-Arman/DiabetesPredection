@@ -16,7 +16,8 @@ def home(request):
 
 def result(request):
 
-    db = pd.read_csv(r'E:\Computer_Science\Mechine_Learning\projects\Diabetes_predection\Data\diabetes.csv')
+    # db = pd.read_csv(r'E:\Computer_Science\Mechine_Learning\projects\Diabetes_predection\Data\diabetes.csv')
+    db = pd.read_csv(r'Data\diabetes.csv')
     db= db.drop('Age', axis=1)
     db=db.drop("DiabetesPedigreeFunction", axis=1)
     X = db.iloc[:, :-1]
